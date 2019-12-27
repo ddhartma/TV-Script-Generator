@@ -97,19 +97,19 @@ show_every_n_batches|   100         |   500         |   500         |   500     
 
 Parameters          | 5th Train-Run | 6th Train-Run | 7th Train-Run | 8th Train-Run | 9th Train-Run | 10th Train-Run | 11th Train-Run | 12th Train-Run
 ----------          | ------------- | ------------- | ------------- | ------------- | -------------  | ------------- | ------------- |  ------------- |
-sequence_length     |   10          |   10          |   10          |   10      
-batch_size          |   128         |   128         |   64          |   256
-dropout (LSTM)      |   0.5         |   0.5         |   0.5         |   0.5     
-dropout (Layer)     |   no dropout  |   no dropout  |   no dropout  |   no dropout  
-num_epochs          |   20          |   5           |   5           |   5     
-learning_rate       |   0.001       |   0.001       |   0.001       |   0.001
-vocab_size          |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
-output_size         |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
-embedding_dim       |   200         |   200         |   200         |   200
-hidden_dim          |   256         |   256         |    256        |    256
-n_layers            |   2           |   2           |   2           |   2
-show_every_n_batches|   500         |   500         |   500         |   500
-**Loss**            |   **3.26**    |   **3.65**    |   **3.81**    |   **3.63**
+sequence_length     |   10          |   10          |   10          |   10          |   10      
+batch_size          |   128         |   128         |   64          |   256         |   512
+dropout (LSTM)      |   0.5         |   0.5         |   0.5         |   0.5         |   0.5     
+dropout (Layer)     |   no dropout  |   no dropout  |   no dropout  |   no dropout  |   no dropout  
+num_epochs          |   20          |   5           |   5           |   5           |   5     
+learning_rate       |   0.001       |   0.001       |   0.001       |   0.001       |   0.001
+vocab_size          |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
+output_size         |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
+embedding_dim       |   200         |   200         |   200         |   200         |   200
+hidden_dim          |   256         |   256         |   256         |   256         |   256
+n_layers            |   2           |   2           |   2           |   2           |   2
+show_every_n_batches|   500         |   500         |   500         |   500         |   500
+**Loss**            |   **3.26**    |   **3.65**    |   **3.81**    |   **3.63**    |   **3.74**
 
 ### Influence of an additional Dropout layer
 The influence of an additional Dropout Layer before the Fully Connected Layer can be studied between the 4th and 5th Train-Run. In the 4th Train-Run an additional Dropout-Layer with a Dropout Probability of 0.3 was used. For the 5th Train-Run the same parameter set as for the 4th Train-Run was used, however this additional Dropout layer was left out. As it can be seen from the Loss-vs-Batches-Plot this additional Dropout layer does not lead to an improvement in performance, as the loss increases.
