@@ -71,55 +71,154 @@ Set and train the neural network with the following parameters:
 - Set **n_layers** --- to the number of layers/cells in your RNN
 - Set **show_every_n_batches** --- to the number of batches at which the neural network should print progress
 
-### Good starting point
+### Parameter: num_epochs
 
-As a starting point for own explorations use the parameter set of Train-Run #
+Parameters          | 5th Train-Run | 6th Train-Run |
+----------          | ------------- | ------------- |
+sequence_length     |   5           |   5           |  
+batch_size          |   128         |   128         |   
+dropout (LSTM)      |   0.5         |   0.5         |  
+dropout (Layer)     |   no dropout  |   no dropout  |   
+num_epochs          |   `20`        |   `5`         |   
+learning_rate       |   0.001       |   0.001       |
+vocab_size          |   vocab_size  |   vocab_size  |   
+output_size         |   vocab_size  |   vocab_size  |   
+embedding_dim       |   200         |   200         |  
+hidden_dim          |   256         |   256         |  
+n_layers            |   2           |   2           |  
+show_every_n_batches|   500         |   500         |   
+**Loss**            |   **3.26**    |   **3.65**     
 
+### Parameter: learning_rate
 
-### Tested configurations and Loss results
+Parameters          | 2nd Train-Run | 3rd Train-Run |
+----------          | ------------- | ------------- |
+sequence_length     |   5           |   5           |  
+batch_size          |   128         |   128         |   
+dropout (LSTM)      |   0.5         |   0.5         |   
+dropout (Layer)     |   0.5         |   0.5         |   
+num_epochs          |   5           |   5           |  
+learning_rate       |   `0.001`     |   `0.01`      |   
+vocab_size          |   vocab_size  | vocab_size    |   
+output_size         |   vocab_size  |   vocab_size  |  
+embedding_dim       |   400         |   400         |  
+hidden_dim          |   512         |   512         |   
+n_layers            |   2           |   2           |   
+show_every_n_batches|   500         |   500         |   
+**Loss**            |   **3.96**    |   **4.89**    |   
 
-Parameters          | 1st Train-Run | 2nd Train-Run | 3rd Train-Run | 4th Train-Run | 5th Train-Run | 6th Train-Run |
-----------          | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-sequence_length     |   5           |   5           |   5           |   10          |   10          |   10          |
-batch_size          |   64          |   128         |   128         |   128         |   128         |   128         |
-dropout (LSTM)      |   0.5         |   0.5         |   0.5         |   0.5         |   0.5         |   0.5         |
-dropout (Layer)     |   0.3         |   0.5         |   0.5         |   0.3         |   no dropout  |   no dropout  |
-num_epochs          |   20          |   5           |   5           |   20          |   20          |   5           |
-learning_rate       |   0.001       |   0.001       |   0.01        |   0.001       |   0.001       |   0.001       |
-vocab_size          |   len(vocab_to_int) |vocab_size | vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |
-output_size         |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |
-embedding_dim       |   400         |   400         |   400         |   200         |   200         |   200         |
-hidden_dim          |   256         |   512         |   512         |   256         |   256         |   256         |
-n_layers            |   2           |   2           |   2           |   2           |   2           |   2           |
-show_every_n_batches|   100         |   500         |   500         |   500         |   500         |   500         |
-**Loss**            |   **3.89**    |   **3.96**    |   **4.89**    |   **3.65**    |   **3.26**    |   **3.65**    |
+### Parameter: batch_size
 
+Parameters          | 7th Train-Run | 6th Train-Run | 8th Train-Run | 9th Train-Run |
+----------          | ------------- | ------------- | ------------- | ------------- |
+sequence_length     |   5           |   5           |   5           |   5      
+batch_size          |   `64`        |   `128`       |   `256`       |   `512`
+dropout (LSTM)      |   0.5         |   0.5         |   0.5         |   0.5     
+dropout (Layer)     |   no dropout  |   no dropout  |   no dropout  |   no dropout  
+num_epochs          |   5           |   5           |   5           |   5     
+learning_rate       |   0.001       |   0.001       |   0.001       |   0.001
+vocab_size          |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
+output_size         |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
+embedding_dim       |   200         |   200         |   200         |   200
+hidden_dim          |   256         |   256         |   256         |   256
+n_layers            |   2           |   2           |   2           |   2
+show_every_n_batches|   500         |   500         |   500         |   500
+**Loss**            |   **3.81**    |   **3.65**    |   **3.63**    |   **3.74**
 
-Parameters          | 5th Train-Run | 6th Train-Run | 7th Train-Run | 8th Train-Run | 9th Train-Run | 10th Train-Run | 11th Train-Run | 12th Train-Run
-----------          | ------------- | ------------- | ------------- | ------------- | -------------  | ------------- | ------------- |  ------------- |
-sequence_length     |   10          |   10          |   10          |   10          |   10      
-batch_size          |   128         |   128         |   64          |   256         |   512
-dropout (LSTM)      |   0.5         |   0.5         |   0.5         |   0.5         |   0.5     
-dropout (Layer)     |   no dropout  |   no dropout  |   no dropout  |   no dropout  |   no dropout  
-num_epochs          |   20          |   5           |   5           |   5           |   5     
-learning_rate       |   0.001       |   0.001       |   0.001       |   0.001       |   0.001
-vocab_size          |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
-output_size         |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size  |   vocab_size
-embedding_dim       |   200         |   200         |   200         |   200         |   200
-hidden_dim          |   256         |   256         |   256         |   256         |   256
-n_layers            |   2           |   2           |   2           |   2           |   2
-show_every_n_batches|   500         |   500         |   500         |   500         |   500
-**Loss**            |   **3.26**    |   **3.65**    |   **3.81**    |   **3.63**    |   **3.74**
+### Parameter: embedding_dim
+
+Parameters          | 8th Train-Run | 10th Train-Run | 11th Train-Run |
+----------          | ------------- | -------------  | -------------  |
+sequence_length     |   5           |   5            |  5             |
+batch_size          |   256         |   256          |  256           |
+dropout (LSTM)      |   0.5         |   0.5          |  0.5
+dropout (Layer)     |   no dropout  |   no dropout   |  no dropout
+num_epochs          |   5           |   5            |  5
+learning_rate       |   0.001       |   0.001        |  0.001
+vocab_size          |   vocab_size  |   vocab_size   |  vocab_size
+output_size         |   vocab_size  |   vocab_size   |  vocab_size
+embedding_dim       |   `200`       |   `400`        |  `600`         |
+hidden_dim          |   256         |   256          |  256           |
+n_layers            |   2           |   2            |  2
+show_every_n_batches|   500         |   500          |  500
+**Loss**            |   **3.63**    |   **3.58**     |  **3.60**
+
+### Parameter: hidden_dim
+
+Parameters          | 13th Train-Run| 8th Train-Run  | 12th Train-Run|
+----------          | ------------- | -------------  | -------------  |
+sequence_length     |   5           |   5            |  5             |
+batch_size          |   256         |   256          |  256           |
+dropout (LSTM)      |   0.5         |   0.5          |  0.5
+dropout (Layer)     |   no dropout  |   no dropout   |  no dropout
+num_epochs          |   5           |   5            |  5
+learning_rate       |   0.001       |   0.001        |  0.001
+vocab_size          |   vocab_size  |   vocab_size   |  vocab_size
+output_size         |   vocab_size  |   vocab_size   |  vocab_size
+embedding_dim       |   200         |   200          |  200           |
+hidden_dim          |   `128`       |   `256`        |  `512`
+n_layers            |   2           |   2            |  2
+show_every_n_batches|   500         |   500          |  500
+**Loss**            |   **3.80**    |   **3.63**     |  **3.34**
+
+### Parameter: sequence_length
+
+Parameters          | 8th Train-Run | 14th Train-Run | 15th Train-Run|
+----------          | ------------- | -------------  | -------------  |
+sequence_length     |   `5`         |   `10`         |  `15`          |
+batch_size          |   256         |   256          |  256           |
+dropout (LSTM)      |   0.5         |   0.5          |  0.5
+dropout (Layer)     |   no dropout  |   no dropout   |  no dropout
+num_epochs          |   5           |   5            |  5
+learning_rate       |   0.001       |   0.001        |  0.001
+vocab_size          |   vocab_size  |   vocab_size   |  vocab_size
+output_size         |   vocab_size  |   vocab_size   |  vocab_size
+embedding_dim       |   200         |   200          |  200           |
+hidden_dim          |   256         |   256          |  256
+n_layers            |   2           |   2            |  2
+show_every_n_batches|   500         |   500          |  500
+**Loss**            |   **3.63**    |   **3.61**       |  **3.59**
 
 ### Influence of an additional Dropout layer
+
+Parameters          | 4th Train-Run | 5th Train-Run |
+----------          | ------------- | ------------- |
+sequence_length     |   10          |   10          |   
+batch_size          |   128         |   128         |   
+dropout (LSTM)      |   0.5         |   0.5         |  
+dropout (Layer)     |   `0.3`       |   `no dropout`|   
+num_epochs          |   20          |   20          |  
+learning_rate       |   0.001       |   0.001       |   
+vocab_size          |   vocab_size  |   vocab_size  |  
+output_size         |   vocab_size  |   vocab_size  |   
+embedding_dim       |   200         |   200         |   
+hidden_dim          |   256         |   256         |   
+n_layers            |   2           |   2           |  
+show_every_n_batches|   500         |   500         |   
+**Loss**            |   **3.65**    |   **3.26**    |   
+
 The influence of an additional Dropout Layer before the Fully Connected Layer can be studied between the 4th and 5th Train-Run. In the 4th Train-Run an additional Dropout-Layer with a Dropout Probability of 0.3 was used. For the 5th Train-Run the same parameter set as for the 4th Train-Run was used, however this additional Dropout layer was left out. As it can be seen from the Loss-vs-Batches-Plot this additional Dropout layer does not lead to an improvement in performance, as the loss increases.
 
-![Sample Output][image1]
 
+### Tested Best-of hyperparameter setting
+
+Parameters          | 16th Train-Run |
+----------          | ------------- |
+sequence_length     |   15          |   
+batch_size          |   256         |
+dropout (LSTM)      |   0.5         |   
+dropout (Layer)     |   no dropout  |
+num_epochs          |   20          |  
+learning_rate       |   0.001       |   
+vocab_size          |   vocab_size  |   
+output_size         |   vocab_size  |   
+embedding_dim       |   400         |   
+hidden_dim          |   512         |  
+n_layers            |   2           |   
+show_every_n_batches|   500         |  
+**Loss**            |   **3**     |   
 
 
 ## Acknowledgments
 
 * README was inspired by https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
-* Inspiration
-* etc
