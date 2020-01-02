@@ -1,5 +1,5 @@
 [//]: # (Image References)
-[image1]: with_vs_wo_dropout2.png "with vs. w/ Dropout"
+[image1]: Train_16_Plot.png "Training loss as a function of batches (every 500 batches)"
 
 # TV Script Generation
 In this project, I generate my own Seinfeld TV scripts using RNNs. I am using part of the Seinfeld dataset of scripts from 9 seasons. The Neural Network which I built generates a new ,"fake" TV script, based on patterns it recognizes in this training data.
@@ -200,7 +200,7 @@ show_every_n_batches|   500         |   500         |
 The influence of an additional Dropout Layer before the Fully Connected Layer can be studied between the 4th and 5th Train-Run. In the 4th Train-Run an additional Dropout-Layer with a Dropout Probability of 0.3 was used. For the 5th Train-Run the same parameter set as for the 4th Train-Run was used, however this additional Dropout layer was left out. As it can be seen from the Loss-vs-Batches-Plot this additional Dropout layer does not lead to an improvement in performance, as the loss increases.
 
 
-### Tested Best-of hyperparameter setting
+### Tested best-of hyperparameter setting
 
 Parameters          | 16th Train-Run |
 ----------          | ------------- |
@@ -218,6 +218,9 @@ n_layers            |   2           |
 show_every_n_batches|   500         |  
 **Loss**            |   **2.63**     |   
 
+### Training loss (tested best-of hyperparameter setting) as a function of batches
+
+![image1]
 
 ## Acknowledgments
 
