@@ -216,7 +216,7 @@ embedding_dim       |   400         |
 hidden_dim          |   512         |  
 n_layers            |   2           |   
 show_every_n_batches|   500         |  
-**Loss**            |   **3**     |   
+**Loss**            |   **2.63**     |   
 
 
 ## Acknowledgments
