@@ -222,6 +222,18 @@ show_every_n_batches|   500         |
 
 ![image1]
 
+### Reasons for the chosen bset-of hyperparameter setting:
+- A sequence_length of 15 was chosen accordingly to the number of words in typical dialog sentences.  
+- A batch_size of 256 was chosen based on a trade-off of
+    - speed up training (getting better for higher batch_sizes),
+    - no out-of-memory errors (getting worse for higher batch_sizes)
+    - good training loss  
+- Leave out additional dropout layers: An additional dropout layer right before the fully connected layer increased the training loss significantly form (3.26 to 3.65).
+- An increase of the num_epochs value reduces the training error. For num_epochs=20 a training loss goal of <3.5 was achieved.
+- The embedding_dim (see table Parameter: embedding_dim) in the tested regime between 200 and 600 had no strong influence on the training loss. Hence an embedding_dim of 400 was arbitrarily chosen.
+- Increasing the hidden_dim from 128 to 512 showed a significant influence on the training loss (see table Parameter: hidden_dim). The training loss decreased from 3.80 down to 3.34. Hence for the final test a hidden_dim of 512 was chosen.
+- Two LSTM layer were stacked as typical values for LSTM stacking are 2 or 3.
+
 ## Acknowledgments
 
 * README was inspired by https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
