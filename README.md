@@ -72,12 +72,12 @@ $ cd $HOME  # or any other development directory you prefer
 $ git clone https://github.com/ddhartma/TV-Script-Generator.git
 $ cd project-tv-script-generation_cloned_2
 ```
-Of course, you obviously need Python. Python 3 is already preinstalled on many systems nowadays. You can check which version you have by typing the following command (you may need to replace python3 with python):
+A Python installation is needed. Python 3 is already preinstalled on many systems nowadays. You can check which version you have by typing the following command (you may need to replace python3 with python):
 
 ```
 $ python3 --version  # for Python 3
 ```
-Any Python 3 version should be fine, preferably 3.5 or above. If you don't have Python 3, you can just download it from [python.org](https://www.python.org/downloads/).
+A Python 3.5 version or above should be fine. If you don't have Python 3, you can just download it from [python.org](https://www.python.org/downloads/).
 
 You need to install several scientific Python libraries that are necessary for this project, in particular NumPy, Matplotlib, Pandas, Jupyter Notebook, Torch and Torchvision. For this, you can either use Python's integrated packaging system, pip, or you may prefer to use your system's own packaging system (if available, e.g. on Linux, or on MacOSX when using MacPorts or Homebrew). The advantage of using pip is that it is easy to create multiple isolated Python environments with different libraries and different library versions (e.g. one environment for each project). The advantage of using your system's packaging system is that there is less risk of having conflicts between your Python libraries and your system's other packages. Since I have many projects with different library requirements, I prefer to use pip with isolated environments.
 
