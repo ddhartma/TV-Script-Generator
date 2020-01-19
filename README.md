@@ -162,8 +162,9 @@ Hence, set and train the neural network with the following parameters:
 - Set **n_layers** --- to the number of layers/cells in your RNN
 - Set **show_every_n_batches** --- to the number of batches at which the neural network should print progress
 
-### Parameter: num_epochs
 In the following section the parameter tuning investigated in separated training runs is depicted. Furthermore the resulting **Loss** for each training run (parameter variation) is shown as a measure of training success.
+
+### Parameter: num_epochs
 
 Parameters          | 5th Train-Run | 6th Train-Run |
 ----------          | ------------- | ------------- |
