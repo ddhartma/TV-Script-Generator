@@ -5,10 +5,10 @@
 In this project, I generate my own Seinfeld TV scripts using Recurrent Neural Networks (RNNs). I am using part of the Seinfeld dataset of scripts from 9 seasons. The Neural Network which I built generates a new ,"fake" TV script, based on patterns it recognizes in this training data.  
 
 In more detail, I am using word embedding (Lookup Tables) and Recurrent Neural Networks based on Long-Term-Short-Term (LSTM) memory cells.
-The code is written in PyTorch. If you are interested in the specific coding steps open the Jupyter Notebook *dlnd_tv_script_generation.ipynb*. A description to *open/execute* the file is provided in the Getting Started section.
+The code is written in PyTorch. If you are interested in the coding steps take a look at the Jupyter Notebook *dlnd_tv_script_generation.ipynb*. A description to clone this project is provided in the Getting Started section.
 
 ## Typical TV script data (original script)
-This is a typical script abstract from the dataset which I used for training the neural network.
+This is a typical example abstract from the dataset which I used for training the neural network.
 
 **george:** are you through?  
 **jerry:** you do of course try on, when you buy?  
@@ -28,9 +28,8 @@ This is a typical script abstract from the dataset which I used for training the
 **george:** no, you didnt!   
 
 ## Typical output "fake" TV script data
-Here I provide the TV "fake" script result after the training was finished. This script output is based on the best-of hyperparameter setting (see 'Tested best-of hyperparameter setting'):
+Here I provide a typical "fake" script result after the training process. This script output is based on the best-of hyperparameter setting (see 'Tested best-of hyperparameter setting'):
 
-**george:**(to jerry) hey, how 'bout giving the computer?(to kramer) i don't know, i'm not buying a soak with her. shes questioning the flesh- daily suspension.  
 **kramer:** yeah? well, i gotta go, i gotta get the cloth out, and then i got the one i can embrace.  
 **jerry:** oh, i don't want you to do this.  
 **jerry:** no, i'm not.  
