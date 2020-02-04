@@ -7,6 +7,8 @@ In this project, I generate my own Seinfeld TV scripts using Recurrent Neural Ne
 In more detail, I am using word embedding (Lookup Tables) and Recurrent Neural Networks based on Long-Term-Short-Term (LSTM) memory cells.
 The code is written in PyTorch. If you are interested in the coding steps take a look at the Jupyter Notebook *dlnd_tv_script_generation.ipynb*. A description to clone this project is provided in the Getting Started section.
 
+This is a project of the Udacity Nanodegree program 'Deep Learning'. Please check this [link](https://www.udacity.com/course/deep-learning-nanodegree--nd101) for more information.
+
 ## Typical TV script data (original script)
 This is a typical example abstract from the dataset which I used for training the neural network.
 
@@ -329,5 +331,5 @@ In the following picture the training loss for the best-off hyperparameter setti
 - Two LSTM layer were stacked as typical values for LSTM stacking are 2 or 3.
 
 ## Acknowledgments
-
+* This is a project of the Udacity Nanodegree program 'Deep Learning'. Please check this [link](https://www.udacity.com/course/deep-learning-nanodegree--nd101) for more information.
 * README was inspired by https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
