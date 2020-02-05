@@ -330,6 +330,14 @@ In the following picture the training loss for the best-off hyperparameter setti
 - Increasing the hidden_dim from 128 to 512 showed a significant influence on the training loss (see table Parameter: hidden_dim). The training loss decreased from 3.80 down to 3.34. Hence for the final test a hidden_dim of 512 was chosen.
 - Two LSTM layer were stacked as typical values for LSTM stacking are 2 or 3.
 
+## (Optionally) Accelerating the Training Process
+
+If your code is taking too long to run, you will need to either reduce the complexity of your chosen CNN architecture or switch to running your code on a GPU.  If you'd like to use a GPU, you can spin up an instance of your own:
+
+#### Amazon Web Services
+
+You can use Amazon Web Services to launch an [EC2 GPU instance](https://aws.amazon.com/de/ec2/). However, this service is not for free.
+
 ## Acknowledgments
 * This is a project of the Udacity Nanodegree program 'Deep Learning'. Please check this [link](https://www.udacity.com/course/deep-learning-nanodegree--nd101) for more information.
 * README was inspired by https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
